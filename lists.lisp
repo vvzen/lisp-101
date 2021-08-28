@@ -10,8 +10,8 @@
 (format t "All super heroes: ~d~%" *superheroes*)
 ;; Use the car to get the first item
 (format t "First super hero: ~d~%" (car *superheroes*))
-;; Use the cdr to get the first item
-(format t "All super heroes expect the first one: ~d~%" (cdr *superheroes*))
+;; Use the cdr to get everything but the first item
+(format t "All super heroes except the first one: ~d~%" (cdr *superheroes*))
 
 ;; List traversal can be achieved with a combination of a and d
 (format t "Second item: ~d~%" (car (cdr *superheroes*)))
