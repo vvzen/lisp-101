@@ -15,7 +15,7 @@ https://apple.stackexchange.com/questions/229669/update-emacs-that-comes-with-os
 
 - `brew install emacs`
 Then, to make `left alt` (the Option Key) the Meta key for emacs when using iTerm2:
-Select Iterm2 -> Preferences -> Profiles Brings up the profiles view.
+Select iTerm -> Preferences -> Profiles Brings up the profiles view.
 On that pane select Keys then Left option key acts as and select +Esc.
 Solution found thanks to https://stackoverflow.com/questions/41987296/setting-alt-option-key-to-meta-in-emacs-on-osx
 
@@ -40,3 +40,13 @@ In vscode, to toggle focus between the terminal view and the editor you can do:
 
 - CMD+J (toggle the terminal and bring focus to it)
 - Or CTRL ` (focus terminal) and CTRL 1 (focus pane 1)
+
+## How to run LISP scripts
+
+```bash
+# Steel Bank Common Lisp
+$ sbcl --script name-of-the-script.lisp
+
+# Common LISP
+$ clisp name-of-the-script.lisp
+```
