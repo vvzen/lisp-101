@@ -1,6 +1,12 @@
 ;;;; Hello world example
 
-(print "What's your name?")
+(format t "What's your name? ") (force-output)
+
+;; Inserting force-output after format avoids i/o buffering issues
+;; Normally, nothing is actually printed to the device until a
+;; newline or force-output or finish-output.
+;; In clisp there was no need, but sbcl was buffering things
+;; causing the read to appear before the print
 
 ;; An evil global var
 ;; LISP people use the * to denote it's global
