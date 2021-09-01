@@ -43,10 +43,15 @@ In vscode, to toggle focus between the terminal view and the editor you can do:
 
 ## How to run LISP scripts
 
-```bash
-# Steel Bank Common Lisp
-$ sbcl --script name-of-the-script.lisp
+#### Steel Bank Common Lisp
+`$ sbcl --script name-of-the-script.lisp`
 
-# Common LISP
-$ clisp name-of-the-script.lisp
-```
+#### Common LISP
+`$ clisp name-of-the-script.lisp`
+
+#### Clozure Common Lisp
+I haven't really found a way..? The best is
+
+`$ ccl --load name-of-the-script.lisp`
+
+But you will still get a REPL after it..
