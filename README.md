@@ -24,6 +24,14 @@ Most of the examples in this repo are coming from knowledge scattered online and
 - For example, `(setf y 42)` is a Special Form
 - Confusingly, the term Special Form is used to refer both to symbols like `setf` and the actual expression that starts with them: `(setf y 42)`. Wilensky resolves this ambiguity by calling setf a Special Function, and reserving Special Form to the whole expression. More modern views think that `setf` should not be considered some kind of abnormal function, but just a marker of special syntax that will be handled specially by the compiler. To resolve this ambiguity, another way is to call `setf` the Special Form Operator and `(setf y 42)` the Special Form Expression.
 
+### Expressions evaluation
+- Symbols are evaluated by looking up the value of the variable that the symbol refers to
+- If the first element of the list is a special form operator, then the list is evaluated according to the syntx rule for that special form
+- Otherwise, the list represents a function call and the first element is evaluated as a function. It can be either a symbol or a lambda expression. If we want to refer to a function in a position other than the first element of a function call, we have to use the `'#` notation
+
+### Lisp Evaluation Rule
+- Every expression is either a list or a atom
+- Every list to be evaluated is either a _special form expression_ or a _function application_
 
 ## How to even start
 
