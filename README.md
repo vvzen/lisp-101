@@ -5,6 +5,26 @@ Probably the result of the fact that there is no _Benevolent Dictator_, or any s
 
 [Some say](https://lispers.org/) that learning LISP will give you "profound enlightenment" so I hope all that of the initial suffering in setting of the dev environment will pay off in the end.
 
+Most of the examples in this repo are coming from knowledge scattered online and here gathered, or from the book 'Artificial Intelligence Programming: Common Case Studies in Common Lisp' (ISBN 978-1-55860-191-8).
+
+## Core Concepts
+
+### Symbols
+
+- Symbols are used to name functions and variables
+- Evaluating a symbol means getting the value of that symbol
+- Symbols are not case sensitive in Common Lisp. JOHN, john and John all refer to the same symbol.
+- Symbols can include a variety of characters: numbers, letters, puntuation marks (+!) and many other things are allowed, and the exact rules for what's not allowed are a bit complex. The convention is to mostly use letters, separated by the `-` (dash) character.
+
+### Special Forms
+
+- They are syntactic expressions that return a value
+- They might look like functions, but they're not. They serve the same goal of 'statements' in other programming languages
+- They're always lists where the first element is one of a small number of privileged symbols
+- For example, `(setf y 42)` is a Special Form
+- Confusingly, the term Special Form is used to refer both to symbols like `setf` and the actual expression that starts with them: `(setf y 42)`. Wilensky resolves this ambiguity by calling setf a Special Function, and reserving Special Form to the whole expression. More modern views think that `setf` should not be considered some kind of abnormal function, but just a marker of special syntax that will be handled specially by the compiler. To resolve this ambiguity, another way is to call `setf` the Special Form Operator and `(setf y 42)` the Special Form Expression.
+
+
 ## How to even start
 
 ### The emacs way
