@@ -101,4 +101,26 @@
 (multiples #'times-3 10)
 (multiples #'times-4 3)
 
+;; Another function with a documentation line
+(defun last-name (name)
+    "Select the last name from a name represented as a list."
+    (first (last name)))
 
+;; A data-structure with lists of lists
+(setf names '((Søren Kierkegaard)
+              (Ludwig Wittgenstein)
+              (Jacques Derrida)))
+
+;; mapcar - apply an arbitrary function to a list
+(mapcar #'last-name names)
+
+;; let's make a recursive function that returns the first name of a list
+(defparameter *titles*
+    '(Mr Miss Misses Mister Sir Madam Dr Admiral Major General)
+    "A list of titles that can appear at the start of a name")
+
+(defun first-name (name)
+    "Select the first name from a name represented as a list"
+    (if (member (first name) *titles*)
+        (first-name (rest name))
+        (first name)))

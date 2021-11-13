@@ -31,10 +31,13 @@
 ;; Everything except the first element
 (rest '(One Two Three))
 
+;; 'car' and 'cdr' are the old ways for 'first' and 'rest', respectively.
+;; CAR stands for 'Content of the Address Register' and CDR for 'Content of the decrement register'
+;; the instructions that were used in the first implementation of Lisp on the IBM 704!
+
 ;; cons is a function that stands for 'Construct'.
 ;; It takes as arguments an element an a list,
 ;; and constructs a new list whose first is the element and rest is the original list
-;; 'cons' will construct compound data object with 2 components, the 'car' and 'cdr'
 (cons 'superman 'batman)
 (defvar *superheroes* (cons 'spiderman '(superman batman dr-strange)))
 

@@ -3,7 +3,8 @@
     (format  t "Hello World!" (force-output)))
 
 ;; defparameter - define special variable
-;; It sets the value of a variable (even if it has already been defined)
+;; Defines a parametere, a variable that doesn't change over the course of a computation
+;; but that might change when we think of new things to add
 (defparameter *the-answer* 42)
 
 ;; setf - set the value of a variable
@@ -25,6 +26,10 @@
 
 ;; function(#') - refer to a function
 #'(hello)
+;; same as:
+(function hello)
 
-;; quote(') - introduce constant data
+;; quote(') - introduce constant data.
 '(something)
+;; same as:
+(quote something)
