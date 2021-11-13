@@ -13,3 +13,5 @@
 ;; You may see diagnostic messages when you do it for the first time.
 (setf *number* 2)
 (format t "Number is ~d~%" *number*)
+
+(format t "Number plus itself is ~d~%" (+ *number* *number*))

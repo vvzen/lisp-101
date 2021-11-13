@@ -1,9 +1,40 @@
 ;; (setq *print-case* :downcase)
 
-;; Define a list
-(list 'superman 'batman 'flash)
+;; Define a variable to store a list
+;; Note that the ' character is used to block the evaluation of an expression, instead
+;; returning it literally. If we didn't use it, it (superman batman flash) would have been
+;; evaluated by looking for a function named 'batman'
+(setf mylist '(superman batman flash))
 
-;; Constructs a compound data object with 2 components, the car and cdr
+;; Append two lists together
+(append '(Pat Kim) '(Robin Sandy))
+;; Same as:
+(append '(Pat Kim) (list 'Robin 'Sandy))
+
+;; Get the number of elements in a list
+(length '(My Elements Here))
+
+;; Get the various elements in a list
+(first '(One Two Three))
+(second '(One Two Three))
+(third '(One Two Three))
+;; Perversely, 'last' returns a list of composed of the last element..
+(last '(One Two Three))
+;; .. so you need to use 'first' on it to get the actual element
+(first (last '(One Two Three)))
+;; The reasoning, is that in ANSI Common LISP, 'last' can return the
+;; 'n' last elements. So that's a little bit less perverse
+(last '(One Two Three) 2)
+
+;; In Common LISP, list indexes start at 0
+(nth 0 '(One Two Three))
+;; Everything except the first element
+(rest '(One Two Three))
+
+;; cons is a function that stands for 'Construct'.
+;; It takes as arguments an element an a list,
+;; and constructs a new list whose first is the element and rest is the original list
+;; 'cons' will construct compound data object with 2 components, the 'car' and 'cdr'
 (cons 'superman 'batman)
 (defvar *superheroes* (cons 'spiderman '(superman batman dr-strange)))
 
